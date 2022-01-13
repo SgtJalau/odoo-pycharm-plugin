@@ -104,7 +104,7 @@ public class OdooModuleServiceImpl implements OdooModuleService {
     @Override
     public PsiDirectory getModuleDirectory(String location) {
         // guess a module first (fast path)
-        //Escape file seperator for 
+        //Escape file separator for windows
         String[] path = location.split(Pattern.quote(File.separator));
         String moduleName = null;
         if ("addons".equals(path[path.length - 2])) {
